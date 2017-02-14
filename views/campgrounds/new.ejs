@@ -1,0 +1,33 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Create a New Campground</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            
+            <form action="/campgrounds" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="New Campground">
+                </div> <!--end form-group-->
+                
+                <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="Price Per Night" min="0.01" step="0.01">
+                </div> <!--end form-group-->
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image"placeholder="Image URL">
+                </div><!--end form-group-->
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description"placeholder="Description">
+                </div><!--end form-group-->
+                
+                <div class="form-group">
+                   <button class="btn btn-lg btn-warning btn-block">Submit</button> 
+                </div><!--end form-group-->
+                
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div> <!--end inline-style centering-->
+    </div> <!--end row-->
+</div> <!--end main container-->
+<% include ../partials/footer.ejs %>
