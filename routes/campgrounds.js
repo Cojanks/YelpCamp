@@ -5,7 +5,6 @@ var middleware = require("../middleware");
 
 //INDEX route - show all campgrounds
 router.get("/", function(req, res){
-    
     //get all campgrounds from DB
     Campground.find({}, function(err, allCampgrounds){
         if(err){

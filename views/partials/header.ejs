@@ -19,7 +19,7 @@
                     <li><a href="/register">Sign up</a></li>
                         <% }else{ %>
                     <!--if logged in, show this-->
-                    <li><a href="#">You are currently logged in as <%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1); %></a></li>
+                    <li><a href="/user/<%=currentUser._id %>">You are currently logged in as <%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1); %></a></li>
                     <li><a href="/logout">Logout</a></li>
                     <% } %>
                 </ul>

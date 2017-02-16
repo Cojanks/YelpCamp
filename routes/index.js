@@ -15,12 +15,19 @@ router.get("/register", function(req, res){
 
 //handle sign-up logic
 router.post("/register", function(req, res){
-    var newUser= new User({username: req.body.username});
+    var newUser= new User(
+        {
+            username: req.body.username, 
+            firstName: req.body.firstName, 
+            lastName: req.body.lastName, 
+            email: req.body.email, 
+            about: req.body.about,
+            location: req.body.location
+        });
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             req.flash("error", err.message);    //err is the error that the browser sends. Its an object containing a "message" property where the error actually is.
             return res.redirect("/register");
- 
         }
         passport.authenticate("local")(req, res, function(){
             req.flash("success", "Welcome to Yelp Camp " + user.username);
@@ -39,7 +46,8 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local", //this middleware is only usable because of "passport.use(new LocalStrategy(User.authenticate()));" which contains the .authenticate() method
     {
         successRedirect: "/campgrounds",
-        failureRedirect: "/login"
+        failureRedirect: "/login",
+        failureFlash: true  // This needs to be here if you want alerts on passport failures
     }), function(req, res){
 });
 

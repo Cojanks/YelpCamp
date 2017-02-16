@@ -1,11 +1,46 @@
 <% include partials/header %>
 
-<h1>Sign up / Register</h1>
-
-<form action="/register" method="post">
-    <input type="text" name="username" placeholder="username"> 
-    <input type="password" name="password" placeholder="password"> 
-    <button>Sign Up</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div style="width: 30%; margin: 25px auto;">
+            
+            <h1 style="text-align: center;">Sign up / Register</h1>
+            
+            
+            <form action="/register" method="post">
+                <div class="form-group">   
+                    <input class="form-control" type="text" name="username" placeholder="Username"> 
+                </div>
+                
+                <div class="form-group"> 
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                
+                <div class="form-group"> 
+                    <input class="form-control" type="text" name="email" placeholder="Email"> 
+                </div>
+                
+                <div class="form-group"> 
+                    <input class="form-control" type="text" name="firstName" placeholder="First Name"> 
+                </div>
+                
+                <div class="form-group"> 
+                    <input class="form-control" type="text" name="lastName" placeholder="Last Name"> 
+                </div>
+                
+                <div class="form-group"> 
+                    <input class="form-control" type="text" name="location" placeholder="Location"> 
+                </div>
+                
+                <div class="form-group"> 
+                    <textarea class="form-control" rows="3" type="text" name="about" placeholder="About Me"></textarea> 
+                </div>
+                <button class="btn btn-lg btn-success btn-block">Sign Up</button>
+            </form>
+            
+            
+        </div>
+    </div> <!--end row-->
+</div> <!--end main container-->
 
 <% include partials/footer %>

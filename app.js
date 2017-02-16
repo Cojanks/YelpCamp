@@ -15,6 +15,7 @@ var express         = require("express"),
 // Route requiring    
 var commentRoutes   = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
+    userRoutes      = require("./routes/user"),
     indexRoutes      = require("./routes/index");
    
 mongoose.connect("mongodb://localhost/yelp_camp");
@@ -52,6 +53,8 @@ app.use(function(req, res, next){
 app.use(indexRoutes); // Originally app.use(indexRoutes); 
 app.use("/campgrounds", campgroundRoutes); // Originally app.use(campgroundRoutes); When we refactored, originally all routes within this route.js started with "/campgrounds". In order to dry this, we deleted all "/campgrounds" from the routes and added the code here to append the "/campgrounds" before all routes in this js file.
 app.use("/campgrounds/:id/comments", commentRoutes); // Originally app.use(indexRoutes); with the "/campgrounds/:id/comments" in all the routes within this route.js file
+app.use("/user", userRoutes);
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("YelpCamp Server Has Started");

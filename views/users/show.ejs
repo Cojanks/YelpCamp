@@ -1,0 +1,57 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div style="width: 60%; margin: 5px auto;">
+                <div class="panel panel-primary">
+                    
+                    <div class="panel-heading">
+                        <h1 class="panel-title text-capitalize" style="font-size:2vh"><%= currentUser.username%>'s Profile</h1>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="panel-body" style="text-align:center;">
+                                <img style="width:100%; max-width:300px;" class="" src="<%= currentUser.avatar%>">
+                                <a href="#">Change</a>
+                            </div>     
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-6">
+                            
+                            <div class="panel-body">
+                                <h4 style="letter-spacing: 1px;" class="text-capitalize"><%= currentUser.firstName%> <%= currentUser.lastName%></h4>
+                                <h6 class="text-info"><%= currentUser.email%></h6>
+                                <hr></hr>
+                                <h6 style="font-style: normal;">Location:</h6>
+                                <h4 class="text-muted lead"><%= currentUser.location%></h4>
+                                <h6>About Me:</h6>
+                                <h4 class="text-muted lead"><%= currentUser.about%></h4>
+                            </div>   
+                              
+                        </div>
+                        
+                    </div> <!-- End row-->
+                    
+                    <div class="panel-footer clearfix">
+                        <div class="pull-right">
+                            <form action="/user/<%= user._id%>?_method=DELETE" method="POST" >
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </div>
+                        <div class="pull-left">
+                            <!--<form action="/user/<%= user._id%>?_method=DELETE" method="POST" >-->
+                                <button class="btn btn-sm btn-warning">Edit</button>
+                            <!--</form>-->
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            <a href="/campgrounds">Go Back</a>
+            
+            </div>  <!-- End 40% width-->      
+        </div> <!-- end col-xs-12-->
+    </div> <!--end row-->
+</div> <!--end main container-->
+<% include ../partials/footer.ejs %>

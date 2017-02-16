@@ -4,6 +4,7 @@
 var middlewareObj = {};
 var Campground = require("../models/campground");
 var Comment = require("../models/comment");
+var User = require("../models/user");
 
 middlewareObj.checkCampgroundOwnership = function(req, res, next) {
     if(req.isAuthenticated()){
@@ -57,6 +58,13 @@ middlewareObj.isLoggedIn = function(req, res, next){
     res.redirect("/login");
 };
 
+// middlewareObj.checkUser = function(req, res, next) {
+//     if(req.isAuthenticated()){
+//         User.findById(req.params.user_id, function(err, foundUser){
+            
+//         });
+//     }
+// };
 
 
 module.exports = middlewareObj;
