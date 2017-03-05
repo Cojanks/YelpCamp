@@ -5,143 +5,144 @@
         <div style="width: 70%; margin: 25px auto;">
             
             <h1 style="text-align: center;">Sign up / Register</h1>
-            <div class="row"> 
-                <!--INPUT-->
-                <div class="col-md-6 col-md-push-6">
-                    <form action="/register" method="post">
-                        <div class="form-group">   
-                            <input class="form-control" type="text" name="username" placeholder="Username"> 
-                        </div>
+            <form action="/register" method="post">
+                <div class="row"> 
+                    <!--INPUT-->
+                    <div class="col-md-6 col-md-push-6">
                         
-                        <div class="form-group"> 
-                            <input class="form-control" type="password" name="password" placeholder="Password">
-                        </div>
-                        
-                        <div class="form-group"> 
-                            <input class="form-control" type="text" name="email" placeholder="Email"> 
-                        </div>
-                        
-                        <div class="form-group"> 
-                            <input class="form-control" type="text" name="firstName" placeholder="First Name"> 
-                        </div>
-                        
-                        <div class="form-group"> 
-                            <input class="form-control" type="text" name="lastName" placeholder="Last Name"> 
-                        </div>
-                        
-                        <div class="form-group"> 
-                            <input class="form-control" type="text" name="location" placeholder="Location"> 
-                        </div>
-                        
-                        <div class="form-group"> 
-                            <textarea class="form-control" rows="3" type="text" name="about" placeholder="About Me"></textarea> 
-                        </div>
-                        <button class="btn btn-lg btn-success btn-block visible-md visible-lg">Sign Up</button>
-                    </form>
-                </div> <!-- end col-med-6 -->
-            
-            
-            
-                <!-- AVATAR SELECTION-->
-                <div class="col-md-6 col-md-pull-6">
-                    <div class="row avatarSelect"> 
-                    
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/Tent-icon.png">
-                                  <input type="radio" name="avatar" value="Tent-icon" checked=""/>
-                                  <i></i>
-                                </label>
+                            <div class="form-group">   
+                                <input class="form-control" type="text" name="username" placeholder="Username"> 
                             </div>
-                        </div>
-                    
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/012-camping.png">
-                                  <input type="radio" name="avatar" value="012-camping" />
-                                  <i></i>
-                                </label>
+                            
+                            <div class="form-group"> 
+                                <input class="form-control" type="password" name="password" placeholder="Password">
                             </div>
-                        </div>
+                            
+                            <div class="form-group"> 
+                                <input class="form-control" type="text" name="email" placeholder="Email"> 
+                            </div>
+                            
+                            <div class="form-group"> 
+                                <input class="form-control" type="text" name="firstName" placeholder="First Name"> 
+                            </div>
+                            
+                            <div class="form-group"> 
+                                <input class="form-control" type="text" name="lastName" placeholder="Last Name"> 
+                            </div>
+                            
+                            <div class="form-group"> 
+                                <input class="form-control" type="text" name="location" placeholder="Location"> 
+                            </div>
+                            
+                            <div class="form-group"> 
+                                <textarea class="form-control" rows="3" type="text" name="about" placeholder="About Me"></textarea> 
+                            </div>
+                            <button class="btn btn-lg btn-success btn-block visible-md visible-lg">Sign Up</button>
                         
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/010-camping-2.png">
-                                  <input type="radio" name="avatar" value="010-camping-2" />
-                                  <i></i>
-                                </label>
-                            </div>
-                        </div>
+                    </div> <!-- end col-med-6 -->
+                
+                
+                
+                    <!-- AVATAR SELECTION-->
+                    <div class="col-md-6 col-md-pull-6">
+                        <div class="row avatarSelect"> 
                         
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/011-camping-1.png">
-                                  <input type="radio" name="avatar" value="011-camping-1" />
-                                  <i></i>
-                                </label>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/Tent-icon.png">
+                                      <input type="radio" name="avatar" value="Tent-icon" checked=""/>
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
                         
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/013-nature.png">
-                                  <input type="radio" name="avatar" value="013-nature" />
-                                  <i></i>
-                                </label>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/012-camping.png">
+                                      <input type="radio" name="avatar" value="012-camping" />
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/005-camping-5.png">
-                                  <input type="radio" name="avatar" value="005-camping-5" />
-                                  <i></i>
-                                </label>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/010-camping-2.png">
+                                      <input type="radio" name="avatar" value="010-camping-2" />
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/006-caravan.png">
-                                  <input type="radio" name="avatar" value="006-caravan" />
-                                  <i></i>
-                                </label>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/011-camping-1.png">
+                                      <input type="radio" name="avatar" value="011-camping-1" />
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/007-camping-4.png">
-                                  <input type="radio" name="avatar" value="007-camping-4" />
-                                  <i></i>
-                                </label>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/013-nature.png">
+                                      <input type="radio" name="avatar" value="013-nature" />
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-4 text-center">
-                            <div class="img-thumbnail">
-                                <label class="rad">
-                                  <img class="img-responsive" src="/008-shower.png">
-                                  <input type="radio" name="avatar" value="008-shower" />
-                                  <i></i>
-                                </label>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/005-camping-5.png">
+                                      <input type="radio" name="avatar" value="005-camping-5" />
+                                      <i></i>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                       <button class="btn btn-lg btn-success btn-block visible-xs visible-sm">Sign Up</button> 
-                    </div> <!--End row (of images)-->
-                </div> <!-- end col-md-6 of images (avatar selection)-->
-            
-          
-            </div> <!--end row-->
-            
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/006-caravan.png">
+                                      <input type="radio" name="avatar" value="006-caravan" />
+                                      <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/007-camping-4.png">
+                                      <input type="radio" name="avatar" value="007-camping-4" />
+                                      <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <div class="img-thumbnail">
+                                    <label class="rad">
+                                      <img class="img-responsive" src="/008-shower.png">
+                                      <input type="radio" name="avatar" value="008-shower" />
+                                      <i></i>
+                                    </label>
+                                </div>
+                            </div>
+                           <button class="btn btn-lg btn-success btn-block visible-xs visible-sm">Sign Up</button> 
+                        </div> <!--End row (of images)-->
+                    </div> <!-- end col-md-6 of images (avatar selection)-->
+                
+              
+                </div> <!--end row-->
+            </form>
         </div> <!--end 30% width-->
     </div> <!--end row-->
 </div> <!--end main container-->

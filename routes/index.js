@@ -23,7 +23,7 @@ router.post("/register", function(req, res){
             email: req.body.email, 
             about: req.body.about,
             location: req.body.location,
-            avatar: req.body.avatar + ".png"
+            avatar: "/" + req.body.avatar + ".png"
         });
     User.register(newUser, req.body.password, function(err, user){
         if(err){
@@ -32,6 +32,7 @@ router.post("/register", function(req, res){
         }
         passport.authenticate("local")(req, res, function(){
             req.flash("success", "Welcome to Yelp Camp " + user.username);
+            // res.send(res.locals.currentUser);
             res.redirect("/campgrounds");
         });
     });
