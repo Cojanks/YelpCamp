@@ -20,6 +20,7 @@ var commentRoutes   = require("./routes/comments"),
    
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 // The above tells the app to use body-parser which allows use to pull information from forms *important*
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -57,5 +58,5 @@ app.use("/user", userRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("YelpCamp Server Has Started");
+    console.log("YelpCamp Final Server Has Started");
 });

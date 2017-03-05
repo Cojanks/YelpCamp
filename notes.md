@@ -175,3 +175,9 @@ CREATE      /campgrounds/:id/comments
 UPDATE      /campgrounds/:id/comments/:comment\_id/edit
 
 DESTOY      /campgrounds/:id/comments/:comment\_id
+
+
+
+
+To do: 
+-Find a way to sanitize an input on updating a campground.
